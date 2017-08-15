@@ -1,0 +1,12 @@
+doctype html
+
+html(lang='en')
+
+head
+    meta(charset='utf-8')
+    title Welcome
+
+body
+    p After clicking this button you will have #{time_to_auth} seconds to auth!
+    a(href="http://" + gw_address + ":" + gw_port + "/wifidog/auth?token=" + token)
+        button(type="button") Get internet access

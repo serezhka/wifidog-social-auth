@@ -1,0 +1,19 @@
+doctype html
+
+html(lang='en')
+
+head
+    meta(charset='utf-8')
+    title Login
+
+    script(src='https://vk.com/js/api/openapi.js?146')
+
+    script.
+        VK.init({apiId: #{vkApiId}})
+
+body
+    div(id='vk_auth')
+    script.
+        VK.Widgets.Auth("vk_auth", {
+            authUrl: '/vkcallback?token=#{token}'
+        });
